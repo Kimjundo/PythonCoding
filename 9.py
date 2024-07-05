@@ -2,11 +2,15 @@
 def solution(n):
     answer = 0
     n += 1
+    last_even = n - 1 if n % 2 == 0 else n - 2  # n 이하의 가장 큰 짝수 계산
     for i in range(n):
         if i % 2 == 0:
             answer += i
-            print(f" {i} +", end="")
-            
+            if i != last_even:  # 마지막 짝수가 아니면 "+" 기호를 추가
+                print(f" {i} +", end="")
+            else:  # 마지막 짝수인 경우 "+" 기호를 추가하지 않음
+                print(f" {i}", end="")
+                
     print(f" = {answer}")
     return answer
 
