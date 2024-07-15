@@ -15,8 +15,6 @@ for i in array:
         print("범위를 벗어났습니다.")
         break
 
-
-
 if ( 1< len(array) < 100) and (0 <= n <= 1000):
     solution(array, n)
 else:
