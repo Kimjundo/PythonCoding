@@ -56,3 +56,23 @@ answer.append(min,max)
 
 answer.append(min)
 answer.append(max)
+
+4. 에러 코드 
+
+for i in num_list(range(n)):
+
+** 설명 **TypeError: 'list' object is not callable
+
+** 발생 원인 ** : for i in num_list(range(n)): // 리스트에 range 를 넣을수 있나 해봤는데 안됬네;; ㄲㅂ 
+
+** 해결 방법 ** : for i in num_list(range(n)): -> for i in num_list: 이렇게 바꾸면 된다.
+
+5. 에러 코드 
+
+ for i in range(num_list,len(num_list),2):
+
+** 설명 ** : TypeError: 'list' object cannot be interpreted as an integer
+
+** 발생 원인 ** : range 에다가 list 를 넣어버려서 생긴 에러 
+
+** 해결 방법 ** : range 는 '정수' 밖에 안들어 가기 때문에 num_list를  빼면 된다. 
